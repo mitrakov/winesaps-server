@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: winesaps
+  namespace: tomsther
+spec:
+  selector:
+    matchLabels:
+      app: winesaps-label
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: winesaps-label
+    spec:
+      # hostNetwork: true # uncomment for port forwarding via ELB
+      containers:
+        - name: winesaps
+          image: mitrakov/winesaps
+          imagePullPolicy: Always
+          ports:
+            - name: winesaps-udp
+              containerPort: 33996
+              protocol: UDP
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi

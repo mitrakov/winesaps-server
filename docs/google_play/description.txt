@@ -1,0 +1,102 @@
+=== en_UK ===
+Winesaps – Online Multiplayer Competitive Run PvP Game.
+
+Challenge your friends to an online PvP race duel!
+The goal is to collect all the food items on the battle field before your rival does the same.
+But be careful! There are lots of wolves that want to "collect" both you and your opponent!
+Moreover you may get equipped with different weapons and useful things, e.g. mine detectors, flashbangs, teleports and so on.
+So pick up these items and turn the enemy's flank!
+
+Features:
+ - 4 characters
+ - over 16 battle fields
+ - over 10 additional abilities
+ - different tactics to win
+ - lots of collectible power-ups to impact on enemies
+ - lots of obstacles (dais, waterfalls, mines, etc.)
+
+Broadband network connection required.
+
+
+
+=== ru_RU ===
+Winesaps - Онлайн Мультиплеер Состязательная PvP Игра.
+
+Брось вызов своим друзьям в онлайн PvP дуэли!
+Цель - собрать все фрукты на поле боя до того, как это успеет сделать Ваш противник.
+Но будьте осторожны! На поле множество волков, которые хотят "собрать" и Вас, и Вашего оппонента!
+Более того, Вы можете экипироваться различным оружием и полезными предметами, например детекторами мин, световыми гранатами и т.д.
+Таким образом, вооружайтесь этими предметами и обходите противника с фланга!
+
+Возможности:
+ - 4 персонажа
+ - более 16 карт для боя
+ - более 10 предметов инвентаря
+ - различные тактики для достижения победы
+ - множество собираемых предметов, которыми можно воздействовать на врага
+ - множество препятствий (возвышения, водопады, мины и т.д.)
+
+Требуется скоростное интернет-соединение.
+
+
+
+=== es_ES ===
+Winesaps – Juego competitivo JcJ multijugador en línea.
+
+¡Desafía a tus amigos a una carrera JcJ en línea!
+El objetivo es recolectar todas las comidas en el campo de batalla antes que tu oponente.
+¡Pero cuidado! ¡Hay muchos lobos que quieren "recolectar" tanto a ti como a tu rival!
+Además, puedes obtener distintas armas y objetos útiles, como detectores de minas, granadas aturdidoras, teletransportadores, etc.
+¡Así que toma estos objetos y sorprende a tu enemigo!
+
+Características:
+ - 4 personajes
+ - más de 16 campos de batalla
+ - más de 10 habilidades adicionales
+ - distintas tácticas para ganar
+ - montones de potenciadores coleccionables para impactar a tus enemigos
+ - montones de obstáculos (plataformas, cascadas, minas, etc.)
+
+Requiere conexión de banda ancha.
+
+
+
+=== pt_PT ===
+Winesaps - Jogo PvP Competitivo Online Multijogador.
+
+Desafia os teus amigos para um duelo de corrida PvP online!
+O objetivo é recolher todos os itens alimentares no campo de batalha antes que o teu rival o faça.
+Mas tem cuidado! Há muitos lobos que te querem "caçar" tanto a ti como ao teu oponente!
+Além disso, podes equipar-te com diferentes armas e coisas úteis, por exemplo Detectores de minas, flashbangs, tele-portes e outros.
+Apanha estes itens e roda o flanco do inimigo!
+
+Características:
+  - 4 personagens
+  - mais de 16 campos de batalha
+  - mais de 10 habilidades adicionais
+  - táticas diferentes para vencer
+  - muitos power-ups colecionáveis para impactar em inimigos
+  - muitos obstáculos (estradas, quedas de água, minas, etc.)
+ 
+É necessária uma ligação de rede de banda larga.
+
+
+
+=== fr_FR ===
+Winesaps – Jeu Multijoueur JcJ Compétitif Online
+
+Défis tes amis lors d'une épreuve de rapidité JcJ en ligne !
+Le but est de collecter tous les items de nourriture sur le champ de bataille avant ton rival.
+Mais attention ! Il y a beaucoup de loups qui veulent vous "collecter," ton adversaire et toi !
+En outre, tu peux être équipé de différentes armes et choses utiles, comme des détecteurs de mines, des grenades flash, des téléporteurs, et ainsi de suite.
+Alors récupère ces objets et prends ton adversaire à revers !
+
+Caractéristiques :
+- 4 personnages
+- plus de 16 champs de bataille
+- plus de 10 capacités additionnelles
+- différentes tactiques pour gagner
+- beaucoup de power-ups pour impressionner l'ennemi
+- beaucoup d'obstacles (estrades, cascades, mines, etc.)
+
+Une connexion haut-débit est requise.

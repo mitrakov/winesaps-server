@@ -1,0 +1,48 @@
+func main(){ // 102ms
+    start := time.Now()
+    
+    s1 := "$2a$10$Fk3bjO2HPlmYH74e.Yq7OePw027tPCLBsAkH30e1X3RGa.e7kRFtW"
+    s2 := "Test000" + "0cbc6611f5540bd0809a388dc95a615b" + "herabora" + "UHgjOvNK"
+    err := bcrypt.CompareHashAndPassword([]byte(s1), []byte(s2))
+
+    elapsed := time.Since(start)
+	fmt.Println(err, elapsed)
+}
+
+func main(){ // 78ms
+    start := time.Now()
+
+    s1 := "VQCTq3BKbHTWWML6c2DDTuwX5wLDEtm0QIanQ/I+254="
+    s2 := "Test000" + "0cbc6611f5540bd0809a388dc95a615b" + "herabora"
+    key, err := scrypt.Key([]byte(s2), []byte("UHgjOvNK"), 16384, 8, 1, 32)
+    res := base64.StdEncoding.EncodeToString(key) == s1
+    
+    elapsed := time.Since(start)
+	fmt.Println(err, elapsed, res)
+}
+
+func main(){ // 20ms
+    start := time.Now()
+
+    s1 := "mNdncwmb7tHsdZX2j/BN17O9j6tDFXvCwlEmyTmazvc="
+    s2 := "Test000" + "0cbc6611f5540bd0809a388dc95a615b" + "herabora"
+    key, err := scrypt.Key([]byte(s2), []byte("UHgjOvNK"), 8192, 4, 1, 32)
+    s3 := base64.StdEncoding.EncodeToString(key)
+    res := s3 == s1
+    
+    elapsed := time.Since(start)
+	fmt.Println(err, elapsed, res)
+}
+
+func main(){ // 10ms
+    start := time.Now()
+
+    s1 := "WXDl9MCYIk4UQp8w8kBuv3owpdtMWJlb+w1zeZjVxSM="
+    s2 := "Test000" + "0cbc6611f5540bd0809a388dc95a615b" + "herabora"
+    key, err := scrypt.Key([]byte(s2), []byte("UHgjOvNK"), 4096, 4, 1, 32)
+    s3 := base64.StdEncoding.EncodeToString(key)
+    res := s3 == s1
+    
+    elapsed := time.Since(start)
+	fmt.Println(err, elapsed, res)
+}

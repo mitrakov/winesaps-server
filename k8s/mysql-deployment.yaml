@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: tomsther
+spec:
+  selector:
+    matchLabels:
+      app: mysql-label
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mysql-label
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:8.0
+          ports:
+            - containerPort: 3306
+          resources:
+            requests:
+              cpu: 100m
+              memory: 512Mi
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "1234"
+            - name: MYSQL_DATABASE
+              value: rush
+            - name: MYSQL_USER
+              value: tommy
+            - name: MYSQL_PASSWORD
+              value: frtfrt650gl
+          volumeMounts:
+            - name: mysql-persistent-storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: mysql-persistent-storage
+          persistentVolumeClaim:
+            claimName: mysql-pv-claim

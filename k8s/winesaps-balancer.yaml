@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: winesaps-balancer
+  namespace: tomsther
+  labels:
+    app: winesaps-label
+spec:
+  type: LoadBalancer
+  ports:
+  - name: winesaps-port
+    port: 33996
+    targetPort: 30996
+    protocol: UDP
+  selector:
+    app: winesaps-label

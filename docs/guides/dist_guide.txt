@@ -1,0 +1,42 @@
+// Distribution Guide
+// @author: mitrakov artem
+// all files needed you can find at client's "_dist" directory
+// for signing don't forget to plug the security smart card
+
+
+ 
+ 1) remove settings file from assets directory
+ 2) remove history folder from assets directory
+ 3) ensure ALL LOGGERS ARE TURNED OFF!!! (SimpleLogger.java)
+ 4) increase version number (VERSION, VERSION_STR in Winesaps.java, manifest, launch4j (optional))
+ 5) update client.version.cur and (if necessary) client.version.min values in INI-file of the Server
+ 6) for Android: ensure all the settings for signing APK were set up
+ 7) for Android: increase "android:versionCode" in the manifest (only for Google Play)
+ 8) for Android: change getPlatform() prefix (AndroidPsObject.java) to "G"
+ 9) for Android: run ":android/build/assembleRelease" Gradle task (check up android\build\outputs\apk)
+10) for Android: rename APK to winesaps.apk
+11) for Android: upload APK to Google Play and make an update
+12) for Android: change getPlatform() prefix (AndroidPsObject.java) to "W"
+13) for Android: again build and rename APK
+14) for Android: copy APK to the web server
+15) for Desktop: run ":desktop/other/dist" Gradle script (check up desktop\build\libs)
+16) for Desktop: put provider.cfg and JAR file in the same directory and sign JAR file (use jarsigner, see cmd line below)
+17) for Desktop: verify signature: jarsigner -verify winesaps.jar
+18) for Windows: pack start.vbs and JAR file to archive "winesaps.zip" (with max compression)
+19) for Windows: run Launch4j to generate executable binary (use launch4j_86.xml config)
+20) for Windows: sign EXE file (use signtool, see cmd line below)
+21) for Windows: verify signature (run as administrator or via properties)
+22) for Windows: pack jre_x86 folder, JAR and EXE binaries to archive "winesaps_jre_x86.zip" (with max compression)
+23) for Windows: run Launch4j to generate executable binary (use launch4j_64.xml config)
+24) for Windows: sign EXE file (use signtool, see cmd line below)
+25) for Windows: verify signature (run as administrator or via properties)
+26) for Windows: pack jre_x64 folder, JAR and EXE binaries to archive "winesaps_jre_x64.zip" (with max compression)
+27) for Windows: copy all ZIPs to the web server
+28) for OSLinux: pack JAR file to the existing TGZ archive (winesaps.tgz); do NOT unpack it on Windows to keep Linux attributes
+29) for OSLinux: copy TGZ to the web server
+30) restart the Server (if necessary) to update changes in INI-file
+
+
+
+signtool sign /n "Open Source Developer, Artem Mitrakov" /t http://time.certum.pl/ /fd sha256 /v winesaps.exe
+jarsigner -keystore NONE -tsa "http://time.certum.pl" -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 -providerArg "provider.cfg" "winesaps.jar" "Open Source Developer, Artem Mitrakov"

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+  namespace: tomsther
+  labels:
+    app: mysql-label
+spec:
+  type: ClusterIP
+  selector:
+    app: mysql-label
+  ports:
+    - name: mysql-port
+      protocol: TCP
+      port: 3306
+      targetPort: 3306

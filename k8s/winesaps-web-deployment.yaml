@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: winesaps-web
+  namespace: tomsther
+spec:
+  selector:
+    matchLabels:
+      app: winesaps-web-label
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: winesaps-web-label
+    spec:
+      containers:
+        - name: winesaps-web
+          image: mitrakov/winesaps-web
+          imagePullPolicy: Always
+          ports:
+            - name: winesaps-web
+              containerPort: 80
+              protocol: TCP
+          #resources:
+            #requests:
+              #cpu: 100m
