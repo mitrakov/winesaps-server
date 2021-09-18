@@ -23,6 +23,5 @@ spec:
               containerPort: 33996
               protocol: UDP
           resources:
-            requests:
-              cpu: 100m
+            limits:
               memory: 128Mi

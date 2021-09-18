@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql
+  name: winesaps-mysql
   namespace: tomsther
 spec:
   selector:
@@ -19,9 +19,8 @@ spec:
           ports:
             - containerPort: 3306
           resources:
-            requests:
-              cpu: 100m
-              memory: 512Mi
+            limits:
+              memory: 350Mi
           env:
             - name: MYSQL_ROOT_PASSWORD
               value: "1234"
