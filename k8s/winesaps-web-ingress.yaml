@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: winesaps-web-ingress
@@ -15,6 +15,11 @@ spec:
   - hosts:
     - guap.mitrakoff.com
     secretName: tls-secret-guap
+  defaultBackend:
+    service:
+      name: winesaps-web-service
+      port:
+        number: 80
   rules:
     - host: mitrakoff.com
       http:
@@ -22,21 +27,27 @@ spec:
           - path: /
             pathType: Prefix
             backend:
-              serviceName: winesaps-web-service
-              servicePort: 80
+              service:
+                name: winesaps-web-service
+                port:
+                  number: 80
     - host: wiki.mitrakoff.com
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
-              serviceName: wiki-service
-              servicePort: 80
+              service:
+                name: wiki-service
+                port:
+                  number: 80
     - host: guap.mitrakoff.com
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
-              serviceName: guap-service
-              servicePort: 80
+              service:
+                name: guap-service
+                port:
+                  number: 80
